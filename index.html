@@ -1,0 +1,35 @@
+<!-- Note: Created and designed by humans, tool-assisted by AI -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TERC Tutoring & Course Schedule · Mt. San Antonio College</title>
+  <meta name="description" content="Official tutoring schedules, live tutor availability, and course offerings at the Mt. San Antonio College Technology Education Resource Center (TERC)." />
+  <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Skip Navigation (WCAG 2.4.1) -->
+  <a class="skip-link" href="#card-grid-mount">Skip to schedule</a>
+
+  <!-- Main Application Mount Point -->
+  <div id="app-root">
+    <div style="min-height: 100vh; display: flex; align-items: center; justify-content: center; font-family: sans-serif; color: #70101b; font-weight: 700; font-size: 1.1rem;">
+      Loading TERC Schedule...
+    </div>
+  </div>
+
+  <!-- Accessible Full-Detail Dialog Modal -->
+  <div id="modal-backdrop" class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true">
+    <div id="modal-content" class="modal-box"></div>
+  </div>
+
+  <!-- Production Scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
