@@ -3,6 +3,7 @@
 Schedule web app for the Technology Education Resource Center (TERC).
 
 **Live Demo**: https://mtsac-terc-preproduction1.robonxt.xyz/
+
 **Backup Link**: https://robonxt.github.io/web-mtsac-terc-preproduction1/
 
 > Note: Created by humans, tool-assisted by AI.
