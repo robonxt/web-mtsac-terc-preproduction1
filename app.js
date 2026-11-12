@@ -209,8 +209,10 @@ const ScheduleApp = (() => {
     const hours = DataStore.getServiceHours();
     const inPersonRaw = hours['TERC'] || hours['terc'] || hours['In-Person Desk Hours'] || hours['in-person desk hours'] || hours['In-Person'] || '';
     const zoomRaw = hours['Zoom'] || hours['zoom'] || hours['Online Zoom Support Hours'] || hours['online zoom support hours'] || hours['Zoom Support'] || '';
+    const counselorRaw = hours['Counselor'] || hours['counselor'] || hours['Counseling'] || hours['counseling'] || '';
     const inPersonLines = formatScheduleLines(inPersonRaw);
     const zoomLines = formatScheduleLines(zoomRaw);
+    const counselorLines = formatScheduleLines(counselorRaw);
 
     const today = DataStore.getTodayName();
     const tutors = DataStore.getTutors();
@@ -307,6 +309,15 @@ const ScheduleApp = (() => {
             ${zoomLines.map(l => `<span>${DataStore.escapeHtml(l)}</span>`).join('')}
           </span>
         </div>
+
+        ${counselorRaw && counselorRaw !== 'Closed' ? `
+        <div class="sidebar-row" style="margin-top: 4px;">
+          <span class="sidebar-lbl">Counselor:</span>
+          <span class="sidebar-val" style="display: flex; flex-direction: column; gap: 2px;">
+            ${counselorLines.map(l => `<span>${DataStore.escapeHtml(l)}</span>`).join('')}
+          </span>
+        </div>
+        ` : ''}
 
         <div class="sidebar-btn-group">
           <a href="https://www.mtsac.edu/tech-health/terc/" target="_blank" rel="noopener noreferrer" class="sidebar-action-btn sidebar-action-primary" style="grid-column: 1 / -1;">Official TERC Website</a>
