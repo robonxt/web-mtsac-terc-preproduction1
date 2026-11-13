@@ -1,6 +1,11 @@
 /* Mt. SAC TERC Schedule - Balanced Production Stylesheet
    Note: Created and designed by humans, tool-assisted by AI */
 
+html {
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+}
+
 :root {
   --mtsac-maroon: #70101b;
   --mtsac-maroon-dark: #4e0a12;
@@ -398,6 +403,7 @@ body {
   flex-direction: column;
   gap: 18px;
   min-width: 0;
+  min-height: calc(100vh - 120px);
 }
 
 .filter-panel {
